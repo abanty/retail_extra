@@ -273,8 +273,8 @@ if ($_SESSION['productos']==1)
 
   // require 'footer.php';
   ?>
-  <!-- <script type="text/javascript" src="scripts/accesorio.js"></script>
-  <script type="text/javascript" src="scripts/editor.js"></script> -->
+  <script type="text/javascript" src="scripts/accesorio.js"></script>
+  <script type="text/javascript" src="scripts/editor.js"></script>
   <?php
   }
   ob_end_flush();

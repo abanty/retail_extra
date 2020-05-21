@@ -165,7 +165,7 @@ if ($_SESSION['productos']==1)
 
   // require 'footer.php';
   ?>
-  <!-- <script type="text/javascript" src="scripts/categoria.js"></script> -->
+  <script type="text/javascript" src="scripts/categoria.js"></script>
 
   <?php
   }
