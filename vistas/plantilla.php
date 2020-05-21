@@ -130,66 +130,6 @@ $('ul.treeview-menu a').filter(function() {
 
 
 
-<script>   
-         $(document).ready(function(){
-            var trigger = $('ul.sidebar-menu li a.sincron'),
-            container = $('#contenido');
-
-            trigger.on('click', function(){
-
-               var $this = $(this);
-               target = $this.data('target'),
-               container.load(target + '.php');
-
-              //  alert(target);
-
-          
-               if (target == "categoria") {        
-
-                  $.getScript("scripts/categoria.js");
-                  
-               }else if(target == "sub_categoria"){
-              
-                  $.getScript("scripts/sub_categoria.js");
-
-               }else if(target == "producto"){   
-
-                $.getScript("scripts/editor.js");
-                  $.getScript("scripts/producto.js");
-                
-
-               }else if(target == "accesorio"){ 
-
-                $.getScript("scripts/editor.js");
-                  $.getScript("scripts/accesorio.js");
-                  
-                
-               }else if(target == "usuario"){      
-
-                  $.getScript("scripts/usuario.js");   
-                                 
-               }else if(target == "configuracion_generales"){
-                  // $.getScript("../public/js/jquery.inputmask.bundle.js"); 
-                  $.getScript("scripts/conf_generales.js");   
-
-               }else if(target == "gestor_slider"){
-                                 
-                  $.getScript("scripts/gestor_slider.js");   
-
-               }else if(target == "dashboard"){
-                                 
-                  $.getScript("scripts/dashboard.js");   
-               
-                 }
-            
-               
-               return false;
-            });
-         });        
-        
-         
-         
-   </script>
 
 </head>
 
@@ -443,11 +383,72 @@ $('ul.treeview-menu a').filter(function() {
 </footer>
 
 
-
   <!-- ChartJS -->
   <script src="../public/js/Chart.js"></script>
   <!-- FastClick -->
   <script src="../public/js/fastclick.js"></script>
+
+<script>   
+         $(document).ready(function(){
+            var trigger = $('ul.sidebar-menu li a.sincron'),
+            container = $('#contenido');
+
+            trigger.on('click', function(){
+
+               var $this = $(this);
+               target = $this.data('target'),
+               container.load(target + '.php');
+
+              //  alert(target);          
+               if (target == "categoria") {        
+
+                  $.getScript("scripts/categoria.js");
+                  
+               }else if(target == "sub_categoria"){
+              
+                  $.getScript("scripts/sub_categoria.js");
+
+               }else if(target == "producto"){   
+
+                $.getScript("scripts/editor.js");
+                  $.getScript("scripts/producto.js");
+                
+
+               }else if(target == "accesorio"){ 
+
+                $.getScript("scripts/editor.js");
+                  $.getScript("scripts/accesorio.js");
+                  
+                
+               }else if(target == "usuario"){      
+
+                  $.getScript("scripts/usuario.js");   
+                                 
+               }else if(target == "configuracion_generales"){
+                  // $.getScript("../public/js/jquery.inputmask.bundle.js"); 
+                  $.getScript("scripts/conf_generales.js");   
+
+               }else if(target == "gestor_slider"){
+                                 
+                  $.getScript("scripts/gestor_slider.js");   
+
+               }else if(target == "dashboard"){
+                                 
+                  $.getScript("scripts/gestor_slider.js");   
+               
+                 }
+            
+               
+               return true;
+            });
+         });        
+        
+         
+         
+   </script>
+
+
+
 
 </div>
 
